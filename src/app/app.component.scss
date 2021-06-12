@@ -12,7 +12,7 @@
 .toolbar {
   display: flex;
   align-items: center;
-  margin-left:100px;
+  margin-left:10%;
 }
 
 .sticky {
@@ -20,7 +20,7 @@
     box-shadow: 0 3px 12px 0 rgba(0,0,0,.08);
     position: fixed;
     top: 0;
-    height: 100px;
+    height: 10%;
     width: 100%;
     z-index: 1000;
 }
@@ -32,7 +32,7 @@
 
 #products {
     margin-left: auto;
-    margin-right: 50px;
+    margin-right: 3rem;
     height: 34px;
     text-align: left;
     font: normal normal normal 25px/34px Open Sans;
@@ -42,7 +42,7 @@
 }
 
 #solutions {
-    margin-right: 50px;
+    margin-right: 3rem;
     text-align: left;
     font: normal normal normal 25px/34px Open Sans;
     letter-spacing: 0px;
@@ -51,7 +51,7 @@
 }
 
 #pricing {
-    margin-right: 50px;
+    margin-right: 3rem;
     text-align: left;
     font: normal normal normal 25px/34px Open Sans;
     letter-spacing: 0px;
@@ -69,7 +69,13 @@
 }
 
 #loginBtn, #openAccBtn {
-    margin-right: 24px;
+    margin-right: 3rem;
+}
+
+#getStartedBtn {
+    margin-right: 10%;
+    background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #00000033;
 }
 
 #openAccBtn {
@@ -81,11 +87,6 @@
   border: 2px solid #663399;
   border-radius: 24px;
   opacity: 1;
-}
-#getStartedBtn {
-    margin-right: 10%;
-    background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
-    box-shadow: 0px 0px 20px #00000033;
 }
 
 #loginTxt,#getStartedTxt, #getMoneyTxt, #openAccBtn{
@@ -106,7 +107,7 @@
   margin-right: auto;
   width: 70%;
 }
-#products:hover, #solutions:hover, #pricing:hover, #loginBtn:hover, #getStartedBtn:hover, #openAccBtn:hover {
+.navbar .toolbar #products:hover, #solutions:hover, #pricing:hover, #loginBtn:hover, #getStartedBtn:hover, #openAccBtn:hover {
     color: #663399;
     cursor: pointer;
 }
@@ -121,20 +122,7 @@
     }
 }
 
-.toolbar #twitter-logo {
-  height: 40px;
-  margin: 0 8px;
-}
-
-.toolbar #youtube-logo {
-  height: 40px;
-  margin: 0 16px;
-}
-
-
 .openLogo {
-  top: 27px;
-  left: 120px;
   width: 100px;
   height: 100px;
   opacity: 1;
@@ -142,9 +130,9 @@
 
 .collect_img {
   margin-top: 10%;
-  margin-left: 160px;
-  width: 50%;
-  height: 50%;
+  margin-left: 15%;
+  width: 80%;
+  height: auto;
   background: #F9F9F9 0% 0% no-repeat padding-box;
   border-radius: 20px;
   opacity: 1;
@@ -160,8 +148,8 @@
 }
 
 .line {
-  margin-left: 180px;
-  width: 236px;
+  margin-left: 15%;
+  width: 10%;
   height: 8px;
   background: #000000 0% 0% no-repeat padding-box;
   border-radius: 13px;
@@ -170,13 +158,14 @@
 
 .simpleTxt {
   margin-top: 50px;
-  margin-left: 180px;
+  margin-left: 15%;
+  width: 25%;
   opacity: 1;
   font-weight: 700;
 }
 
 .line2 {
-  width: 236px;
+  width: 20%;
   height: 8px;
   background: #000000 0% 0% no-repeat padding-box;
   border-radius: 13px;
@@ -184,17 +173,43 @@
 }
 
 .simpleTxt2 {
+  width: 60%;
   margin-top: 30%;
   height: 100px;
   opacity: 1;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 1280px) {
+  .simpleTxt{
+    width: 45% !important;
+  }
+
+  .line {
+    width: 15% !important;
+  }
+  .simpleTxt2{
+    width: 100% !important;
+  }
+
+  .line2 {
+    width: 25% !important;
+  }
+  
+  .card2 {
+    width: 25% !important;
+  }
+  svg#circle{
+    top: -10%;
+    left: 60%
+  }
 }
 svg#circle {
   position: absolute;
   top: -10%;
   width: 100%;
   height: 100%;
-  left: 60%;
+  left: 50%;
   background: transparent url('../assets/img/circle.svg') 0% 0% no-repeat padding-box;
 }
 svg#circle2 {
@@ -227,14 +242,6 @@ svg#footer_img {
   height: 100%;
   background: transparent url('../assets/img/wave.png') 0% 0% no-repeat padding-box;
 }
-svg.material-icons {
-  height: 24px;
-  width: auto;
-}
-
-svg.material-icons:not(:last-child) {
-  margin-right: 8px;
-}
 
 .card svg.material-icons path {
   fill: #888;
@@ -244,11 +251,12 @@ svg.material-icons:not(:last-child) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 80%;
 }
 
 .card1 {
-  width: 50%;
-  height: 666px;
+  width: 75%;
+  height: auto;
   background: #FFFFFF 0% 0% no-repeat padding-box;
   box-shadow: 0px 0px 30px #0000000F;
   border-radius: 20px;
@@ -257,7 +265,7 @@ svg.material-icons:not(:last-child) {
 .card2 {
   margin-top: auto;
   margin-bottom: auto;
-  width: 15%;
+  width:20%;
   height: 450px;
   background: #663399 0% 0% no-repeat padding-box;
   box-shadow: 7px 7px 25px #00000033;
@@ -266,9 +274,8 @@ svg.material-icons:not(:last-child) {
 }
 
 .card3 {
-  width: 391px;
+  max-width: 600px;
   margin-top: 30px;
-  margin-left: 253px;
   height: 300px;
   box-shadow: 0px 0px 30px #2321321F;
   border: 1px solid #FFFFFF;
@@ -277,7 +284,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .card4 {
-  width: 391px;
+  max-width: 600px;
   margin-top: 15%;
   height: 300px;
   box-shadow: 0px 0px 30px #2321321F;
@@ -348,7 +355,7 @@ svg.material-icons:not(:last-child) {
 }
 
 .amtTxt {
-  margin-top: 0px;
+  margin-top: 10px;
   margin-left: 40px;
   text-align: left;
   letter-spacing: 0px;
