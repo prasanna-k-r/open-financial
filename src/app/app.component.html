@@ -1,0 +1,181 @@
+<section class="body" (scroll)="onWindowScroll($event)">
+  <!-- Toolbar -->
+  <header id="navbar">
+    <div class="toolbar">
+      <img
+        width="40"
+        class="openLogo"
+        alt="open Logo"
+        src="./../assets/img/open_logo.png"
+      />
+      <div id="products" class="products">Products</div>
+      <div id="solutions">Solutions</div>
+      <div id="pricing">Pricing</div>
+      <button id="loginBtn">
+        <span id="loginTxt">Login</span>
+      </button>
+      <button id="getStartedBtn">
+        <span id="getStartedTxt">Get Started</span>
+      </button>
+      <svg
+        id="circle"
+      >
+      </svg>
+      <svg
+        id="circle2"
+      >
+      </svg>
+      <svg
+        id="accounting_dot"
+      >
+      </svg>
+      <svg
+        id="accounting_dot2"
+      >
+      </svg>
+    </div>
+  </header>
+
+  <div class="row" style="margin-top: 3%;">
+    <div class="col-6">
+      <h2 class="simpleTxt">We make it Super Simple</h2>
+      <div class="line"></div>
+      <img
+        width="40"
+        class="collect_img"
+        alt="open Logo"
+        src="./../assets/img/collect_img-video.png"
+      />
+    </div>
+    <div class="col-6">
+      <div class="card-container1">
+        <div class="card1">
+          <h4 class="eligibilityCalcTxt">Eligibility Calculator</h4>
+          <h6 class="monthlyIncomeTxt">Monthly Income</h6>
+          <h4 class="amtTxt">₹ 1,50,000</h4>
+  
+          <ngx-slider [(value)]="value" [options]="options" style="margin-top: 50px;"></ngx-slider>
+  
+          <h6 class="monthlyIncomeTxt">Monthly Expense</h6>
+          <h4 class="amtTxt">₹ 50,000</h4>
+  
+          <ngx-slider [(value)]="value" [options]="options2" style="margin-top: 0px;"></ngx-slider>
+  
+          <h6 class="monthlyIncomeTxt">Repayment Tenure</h6>
+          
+          <mat-form-field appearance="fill" style="margin-left: 40px; width: 80%;">
+            <mat-label>Months</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="month">
+              <mat-option *ngFor="let month of months" [value]="month.value">
+                {{month.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <div class="row" style="width: 80%;">
+            <div class="col-10">
+              <h6 class="monthlyIncomeTxt">Do you have any existing loans?</h6>            </div>
+            <div class="col-2" style="margin-top: 10px;">
+              <mat-slide-toggle></mat-slide-toggle>
+            </div>
+          </div>
+          <h6 class="monthlyIncomeTxt">EMI of existing loan (optional)</h6>
+          
+          <mat-form-field appearance="fill" style="margin-left: 40px; width: 80%;">
+            <input matInput placeholder="₹ 15,000">
+          </mat-form-field>
+        </div>
+        <div class="card2">
+          <h6 class="loanAmtTxt">Loan Amount</h6>
+          <h4 class="loanTxt">₹ 1,00,000</h4>
+          <h6 class="loanAmtTxt">Your EMI will be</h6>
+          <h4 class="loanTxt">₹ 15,000</h4>
+          <button id="getMoneyBtn" style="background: #FFFFFF;">
+            <span id="getMoneyTxt">GET MONEY</span>
+          </button>
+        </div>
+      </div>
+           
+    </div>
+  </div>
+  <div class="row" style="margin-top: 10%;">
+    <div class="col-4">
+      <div class="card3">
+        <img
+          style="margin-left: 25px;margin-top: 20px;"
+          width="40"
+          class="openLogo"
+          alt="open Logo"
+          src="./../assets/img/GetPaidInstantly.png"
+        />
+        <h4 class="amtTxt">Quick cash disbursement</h4>
+        <h6 class="cardTxt">Get terms loans that your business needs within 72 hrs</h6>
+      </div>
+
+      <div class="card3">
+        <img
+          style="margin-left: 25px;margin-top: 20px;"
+          width="40"
+          class="openLogo"
+          alt="open Logo"
+          src="./../assets/img/Lowinterestrate.png"
+        />
+        <h4 class="amtTxt">Low-interest rate</h4>
+        <h6 class="cardTxt">Achieve your financial goals with an amazing interest rate starting at 13% per annum</h6>
+      </div>
+
+      <div class="card3" id="card3">
+        <img
+          style="margin-left: 25px;margin-top: 20px;"
+          width="40"
+          class="openLogo"
+          alt="open Logo"
+          src="./../assets/img/SecurePayments.png"
+        />
+        <h4 class="amtTxt">Zero Paperwork</h4>
+        <h6 class="cardTxt">Get started instantly by submitting only your basic details & bank statements</h6>
+      </div>
+
+    </div>
+    <div class="col-4">
+      <div class="card4">
+        <img
+          style="margin-left: 25px;margin-top: 20px;"
+          width="40"
+          class="openLogo"
+          alt="open Logo"
+          src="./../assets/img/freelancer_feature_icon_6@1.5x.png"
+        />
+        <h4 class="amtTxt">Ace your business finances</h4>
+        <h6 class="cardTxt">Manage banking, accounting & everything in between, on one platform</h6>
+      </div>
+      <div class="card4">
+        <img
+          style="margin-left: 25px;margin-top: 20px;"
+          width="40"
+          class="openLogo"
+          alt="open Logo"
+          src="./../assets/img/Covid.png"
+        />
+        <h4 class="amtTxt">Loans to fight COVID-19</h4>
+        <h6 class="cardTxt">Zero EMI for first 3 months on Back-to-Business loans of upto 1 lakh</h6>
+      </div>
+    </div>
+    <div class="col-4">
+      <h2 class="simpleTxt2">Boost your business with Open</h2>
+      <div class="line2"></div>
+      <h6 class="cardTxt2">Get your hands on a term loan that’s crafted for your business</h6>
+
+      <button id="openAccBtn">
+        <span id="openAccTxt">Get an Open Account</span>
+      </button>
+    </div>
+  </div>
+  <footer>
+    <svg
+    id="footer_img"
+  >
+  </svg>
+  </footer>
+  <router-outlet></router-outlet>
+</section>
